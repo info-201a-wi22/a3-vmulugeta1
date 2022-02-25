@@ -176,6 +176,83 @@ jail_pop_by_race2 <- ggplot(data = specific_interest_dataset) +
        x = "Years", color = "Legend") +
   scale_color_manual(values = colors)
 
+### **U.S. Trends Map:** Black Jail Population in Washington
 
+library(tidyverse)
+library(ggplot2)
+library(maps)
+library(mapproj)
+library(patchwork)
+
+counties_wa <- incarcerations_dataset %>%
+  filter(year == max(year)) 
+
+
+wa_shape <- map_data("county") %>%
+  unite(polyname, region, subregion, sep = ",") %>%
+  left_join(county.fips, by="polyname")
+
+map_data <- wa_shape %>%
+  left_join(counties_wa, by="fips") %>%
+  filter(state == "WA")
+
+blank_theme_wa <- theme_bw() + 
+  theme(
+    axis.line = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.title = element_blank(),
+    plot.background = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank()
+  )
+incarcerations_black_map_wa <- ggplot(map_data) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = black_jail_pop_rate), 
+    color="blue", size = 0.3
+  ) + 
+  coord_map() +
+  scale_fill_continuous(limits = c(0, max(map_data$black_jail_pop_rate)), na.value = "white",
+                        low="blue", high="red") +
+  blank_theme_wa +
+  ggtitle("Black Jail Population in Washington")
+
+
+#### **U.S. Trends Map:** Black Jail Population in California
+
+counties_ca <- incarcerations_dataset %>%
+  filter(year == max(year)) 
+
+
+ca_shape <- map_data("county") %>%
+  unite(polyname, region, subregion, sep = ",") %>%
+  left_join(county.fips, by="polyname")
+
+map_data_ca <- ca_shape %>%
+  left_join(counties_ca, by="fips") %>%
+  filter(state == "CA")
+
+blank_theme_ca <- theme_bw() + 
+  theme(
+    axis.line = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    axis.title = element_blank(),
+    plot.background = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank()
+  )
+incarceration_black_map_ca <- ggplot(map_data_ca) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = black_jail_pop_rate), 
+    color="blue", size = 0.3
+  ) + 
+  coord_map() +
+  scale_fill_continuous(limits = c(0, max(map_data$blacki_jail_pop_rate)), na.value = "white",
+                        low="blue", high="red") +
+  blank_theme_wa +
+  ggtitle("Black Jail Population in California")
 
 
