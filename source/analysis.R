@@ -228,7 +228,6 @@ blank_theme_ca <- theme_bw() +
     axis.ticks = element_blank(),
     axis.title = element_blank(),
     plot.background = element_blank(),
-    panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(),
     panel.border = element_blank()
   )
@@ -242,5 +241,6 @@ incarceration_black_map_ca <- ggplot(map_data_ca) +
                         low="blue", high="red") +
   blank_theme_ca +
   ggtitle("Black Jail Population in California")
+
 
 
