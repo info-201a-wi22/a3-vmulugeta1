@@ -1,0 +1,17 @@
+title: "A3 Data Visualization Incarceration Assignment"
+author: "Victoria Mulugeta"
+date: "02/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+source("analysis.R")
+knitr:: opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## _**Incarceration Rates in Relation to Race**_
+
+Looking at the data presented on the *Vera Institute for Justice* regarding **Incarceration Trends**, it is clearly seen that there are racial disparities present in jail rates. On the website there are very detailed reports on the incarcerations of different races, having a specific emphasis on people of color- and black people particularly, in aims to prove how this is a result of the criminal system treating black people more harshly in every sector of the legal process. These racial disparities cause harms beyond longer jail times, but also lead towards disproportionate economic, health, and social problems for communities of color. 
+
+The aims of this report is to dissect the prevalent issue of racism present in incarceration rates, and the data selected is to prove that there are inequalities and harsher jail times, and treatments pushed onto people of color, and black people in particular are much more extensive. 
+
