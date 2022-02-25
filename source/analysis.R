@@ -65,18 +65,6 @@ prop_or_latinx_white2 <- specific_interest_dataset %>%
   filter(latinx_white_prop_or == max(latinx_white_prop_or, na.rm = TRUE)) %>%
   pull(latinx_white_prop_or)
 
-## **Insights**
-
-After computing this data for both **Oregon** and **California**, it was 
-unsurprising to see that for the most recent dates of incarcerations, which was 
-in *2018*, the proportion of black/white and latinx/white in California did not
-have a huge gap, (3.4 v.s. 19.8), this is not shocking because latinx and black
-populations are amongst the most profiled races by law enforcement, and face
-much harsher punishment for crimes due to this. However, I was shocked at how 
-much higher the proportion was for latinx/white, which had a propotion over 5 
-times higher than the black/white. The gap for the overall ratio is much smaller, with the `prop_ca_black_white` being roughly 2.8 and `prop_ca_latinx_white` being roughly 5.3. It is unfortuante to see that the level of incarceration has increased over the years, as it is evident that criminal justice reform is necessary. On the other hand, when looking at Oregon, for *2018* incarcerations, there was not a huge gap between the proportion of black/white and latinx/white, (0.81 v.s. 2), this was not shocking to me since Oregon is much smaller in population in comparison to California, therefore having less of a black and latinx community. It was relieving to see that there was not a huge increase in incarceration when compared to the overall
-proportion for Oregon, (0.81 VS. 1.04). This also raises the question on if racial disparities in the justice system are more present in highly populated areas of people of color. 
-
 ### 2. *What is the proportion of BIPOC in Los Angeles County jails in 2010? What is the proportion of BIPOC in King County jails in 2010?*
 
 los_angeles_county_BIPOC_white <- specific_interest_dataset %>%

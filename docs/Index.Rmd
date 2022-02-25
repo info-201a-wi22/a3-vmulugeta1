@@ -3,7 +3,6 @@ author: "Victoria Mulugeta"
 date: "02/25/2022"
 output: html_document
 ---
-
 ```{r setup, include=FALSE}
 source("analysis.R")
 knitr:: opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
@@ -13,5 +12,16 @@ knitr:: opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 Looking at the data presented on the *Vera Institute for Justice* regarding **Incarceration Trends**, it is clearly seen that there are racial disparities present in jail rates. On the website there are very detailed reports on the incarcerations of different races, having a specific emphasis on people of color- and black people particularly, in aims to prove how this is a result of the criminal system treating black people more harshly in every sector of the legal process. These racial disparities cause harms beyond longer jail times, but also lead towards disproportionate economic, health, and social problems for communities of color. 
 
-The aims of this report is to dissect the prevalent issue of racism present in incarceration rates, and the data selected is to prove that there are inequalities and harsher jail times, and treatments pushed onto people of color, and black people in particular are much more extensive. 
+The aims of this report is to dissect the prevalent issue of racism present in incarceration rates, and the data selected is to prove that there are inequalities and harsher jail times, and treatments pushed onto people of color, and black people in particular are much more extensive.
+
+## **Insights**
+After computing this data for both **Oregon** and **California**, it was 
+unsurprising to see that for the most recent dates of incarcerations, which was 
+in *2018*, the proportion of black/white and latinx/white in California did not
+have a huge gap, (3.4 v.s. 19.8), this is not shocking because latinx and black
+populations are amongst the most profiled races by law enforcement, and face
+much harsher punishment for crimes due to this. However, I was shocked at how 
+much higher the proportion was for latinx/white, which had a propotion over 5 
+times higher than the black/white. The gap for the overall ratio is much smaller, with the `prop_ca_black_white` being roughly 2.8 and `prop_ca_latinx_white` being roughly 5.3. It is unfortuante to see that the level of incarceration has increased over the years, as it is evident that criminal justice reform is necessary. On the other hand, when looking at Oregon, for *2018* incarcerations, there was not a huge gap between the proportion of black/white and latinx/white, (0.81 v.s. 2), this was not shocking to me since Oregon is much smaller in population in comparison to California, therefore having less of a black and latinx community. It was relieving to see that there was not a huge increase in incarceration when compared to the overall
+proportion for Oregon, (0.81 VS. 1.04). This also raises the question on if racial disparities in the justice system are more present in highly populated areas of people of color. 
 
