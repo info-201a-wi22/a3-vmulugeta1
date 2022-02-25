@@ -167,7 +167,7 @@ jail_pop_by_race <- ggplot(data = specific_interest_dataset) +
        x = "Years", color = "Legend") +
   scale_color_manual(values = colors)
 
-colors <- c("Latinx Jail Population" = "orange", "White Jail Population" = "darkpurple")
+colors <- c("Latinx Jail Population" = "orange", "White Jail Population" = "purple")
 jail_pop_by_race2 <- ggplot(data = specific_interest_dataset) +
   geom_line(aes(x = year, y = latinx_jail_pop, color = "Latinx Jail Population"), size = 1) + 
   geom_line(aes(x = year, y = white_jail_pop, color = "White Jail Population"), size = 1) + 
@@ -250,9 +250,9 @@ incarceration_black_map_ca <- ggplot(map_data_ca) +
     color="blue", size = 0.3
   ) + 
   coord_map() +
-  scale_fill_continuous(limits = c(0, max(map_data$blacki_jail_pop_rate)), na.value = "white",
+  scale_fill_continuous(limits = c(0, max(map_data$black_jail_pop_rate)), na.value = "white",
                         low="blue", high="red") +
-  blank_theme_wa +
+  blank_theme_ca +
   ggtitle("Black Jail Population in California")
 
 
