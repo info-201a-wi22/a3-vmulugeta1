@@ -37,7 +37,7 @@ prop_ca_latinx_white2 <- specific_interest_dataset %>%
   filter(latinx_white_prop_ca == max(latinx_white_prop_ca, na.rm = TRUE)) %>%
   pull(latinx_white_prop_ca)
 
-## Oregon Ratio of Black/White Jail Population
+### Oregon Ratio of Black/White Jail Population
 prop_or_black_white <- specific_interest_dataset %>%
   filter(state == "OR") %>%
   filter(year == max(year)) %>%
@@ -51,7 +51,7 @@ prop_or_black_white2 <- specific_interest_dataset %>%
   filter(black_white_prop_or == max(black_white_prop_or, na.rm = TRUE)) %>%
   pull(black_white_prop_or)
 
-## Oregon Ratio of Latinx/White Jail Population
+### Oregon Ratio of Latinx/White Jail Population
 prop_or_latinx_white <- specific_interest_dataset %>%
   filter(state == "OR") %>%
   filter(year == max(year)) %>%
@@ -108,7 +108,7 @@ black_female_prison_location <- incarcerations_dataset %>%
   filter(black_female_prison_adm == max(black_female_prison_adm, na.rm = TRUE)) %>%
   pull(county_name)
 
-## 4. *Where is the highest amount of males incarcerated? Where is the highest amount of females incarcerated? What are these numbers?* 
+### 4. *Where is the highest amount of males incarcerated? Where is the highest amount of females incarcerated? What are these numbers?* 
 
 max_male_adult_jail_pop <- incarcerations_dataset %>%
   filter(male_adult_jail_pop == max(male_adult_jail_pop, na.rm = TRUE)) %>%
@@ -128,8 +128,7 @@ max_female_adult_jail_pop_number <- incarcerations_dataset %>%
 
 
 
-## **Graph #1** _Black Jail Incarcerations by Year_
-
+### **Graph #1** _Black Jail Incarcerations by Year_
 
 library(ggplot2)
 library(tidyverse)
@@ -137,23 +136,14 @@ black_by_year <- incarcerations_dataset %>%
   group_by(year) %>%
   summarize(black_jail_population = sum(black_jail_pop, na.rm = TRUE))
 
-black_bar_chart3 <- ggplot(data = black_by_year) +
+black_bar_chart1 <- ggplot(data = black_by_year) +
   geom_col(mapping = aes(x = year, y = black_jail_population, fill = year)) +
   labs(x = "Year", y = "Black Population", title = "Black Jail Incarceration Rates by the Year") +
   scale_fill_gradient(low = "#0000FF", high = "#FF0000")
-coord_flip()
+coord_flip() 
 
 
-## **Graph #2** _Incarceration Rates of BIPOC in Comparison to White_
-
-colors <- c("White Jail Population" = "lightblue", "Black Jail Population" = "pink")
-jail_pop_by_race <- ggplot(data = specific_interest_dataset) +
-  geom_line(aes(x = year, y = white_jail_pop, color = "White Jail Population"), size = 1) + 
-  geom_line(aes(x = year, y = black_jail_pop, color = "Black Jail Population"), size = 1) + 
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
-  labs(title = "Jail Population of Black People vs White People", y = "Jail Population",
-       x = "Years", color = "Legend") +
-  scale_color_manual(values = colors)
+### **Graph #2** _Incarceration Rates of BIPOC in Comparison to White_
 
 colors <- c("Latinx Jail Population" = "orange", "White Jail Population" = "purple")
 jail_pop_by_race2 <- ggplot(data = specific_interest_dataset) +
@@ -241,6 +231,3 @@ incarceration_black_map_ca <- ggplot(map_data_ca) +
                         low="blue", high="red") +
   blank_theme_ca +
   ggtitle("Black Jail Population in California")
-
-
-
