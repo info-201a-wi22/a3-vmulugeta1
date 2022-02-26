@@ -138,7 +138,7 @@ black_by_year <- incarcerations_dataset %>%
 
 black_bar_chart1 <- ggplot(data = black_by_year) +
   geom_col(mapping = aes(x = year, y = black_jail_population, fill = year)) +
-  labs(x = "Year", y = "Black Population", title = "Black Jail Incarceration Rates by the Year") +
+  labs(x = "Year", y = "Black Population", title = "Black Jail Incarceration Rates Nationwide by the Year") +
   scale_fill_gradient(low = "#0000FF", high = "#FF0000")
 coord_flip() 
 

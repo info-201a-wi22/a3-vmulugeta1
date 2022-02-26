@@ -9,36 +9,44 @@ output: html_document
  source("~/Documents/INFO201CODE/a3-vmulugeta1/source/analysis.R")
 knitr:: opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
-## **Incarceration Rates in Relation to Race**
+### **Incarceration Rates in Relation to Race**
 
 Looking at the data presented on the _**Vera Institute for Justice**_ regarding **Incarceration Trends**, it is clearly seen that there are racial disparities present in jail rates. On the website there are very detailed reports on the incarcerations of different races, having a specific emphasis on people of color- and black people particularly, in aims to prove how this is a result of the criminal system treating black people more harshly in every sector of the legal process. These racial disparities cause harms beyond longer jail times, but also lead towards disproportionate economic, health, and social problems for communities of color. 
 
 The aims of this report is to dissect the prevalent issue of racism present in incarceration rates, and the data selected is to prove that there are inequalities and harsher jail times, and treatments pushed onto people of color, and black people in particular are much more extensive.
 
-1. *What is the ratio of black to white jail populations? What is the ratio of latinx to white jail populations?*
+### **Five Values of Interest**
 
-### California Ratio of Black/White Jail Population
+1. *What is the ratio of black to white jail populations? What is the ratio of Latinx to white jail populations?*
+
+##### California Ratio of Black/White Jail Population
+
 ``` {r echo = FALSE}
 prop_ca_black_white
 ```
 ``` {r echo = FALSE}
 prop_ca_black_white2 
 ```
-### California Ratio of Latinx/White Jail Population 
+
+##### California Ratio of Latinx/White Jail Population 
+
 ``` {r echo = FALSE}
 prop_ca_latinx_white
 ```
 ``` {r echo = FALSE}
 prop_ca_latinx_white2 
 ```
-### Oregon Ratio of Black/White Jail Population
+
+##### Oregon Ratio of Black/White Jail Population
+
 ``` {r echo = FALSE}
 prop_or_black_white
 ```
 ``` {r echo = FALSE}
 prop_or_black_white2
 ```
-### Oregon Ratio of Latinx/White Jail Population
+
+##### Oregon Ratio of Latinx/White Jail Population
 ``` {r echo = FALSE}
 prop_or_latinx_white
 ```
@@ -46,26 +54,39 @@ prop_or_latinx_white
 prop_or_latinx_white2 
 ```
 
+
 ### **Insights**
-After computing this data for both _Oregon_ and _California_, it was 
-unsurprising to see that for the most recent dates of incarcerations, which was 
-in *2018*, the proportion of black/white and latinx/white in California did not
-have a huge gap, **(3.4 v.s. 19.8)**, this is not shocking because latinx and black
-populations are amongst the most profiled races by law enforcement, and face
-much harsher punishment for crimes due to this. However, I was shocked at how 
-much higher the proportion was for latinx/white, which had a propotion over 5 
-times higher than the black/white. The gap for the overall ratio is much smaller, with the `prop_ca_black_white` being roughly 2.8 and `prop_ca_latinx_white` being roughly 5.3. It is unfortuante to see that the level of incarceration has increased over the years, as it is evident that criminal justice reform is necessary. On the other hand, when looking at Oregon, for *2018* incarcerations, there was not a huge gap between the proportion of black/white and latinx/white, **(0.81 v.s. 2)**, this was not shocking to me since Oregon is much smaller in population in comparison to California, therefore having less of a black and latinx community. It was relieving to see that there was not a huge increase in incarceration when compared to the overall
-proportion for Oregon, **(0.81 VS. 1.04)**. This also raises the question on if racial disparities in the justice system are more present in highly populated areas of people of color.
+
+Oregon and California were two regions of interest for me because _California_ is a majority-minority state, and _Oregon_ is known as a more rural state with a higher population of White people. I wanted to compare two states that were located close to each-other, but opposites in terms of size and demographics. After computing this data for both _Oregon_ and _California_, it was unsurprising to see that for the most recent dates of incarcerations, which was in *2018*, the proportion of black/white and latinx/white in California did not have a huge gap, **(2.82 v.s. 5.28)**, this is not shocking because Latinx and black populations are amongst the most profiled races by law enforcement, and face much harsher punishment for crimes due to this. The gap for the overall ratio is much larger, with the `prop_ca_black_white2` being roughly 3.4 and `prop_ca_latinx_white2` being roughly 19.7. With the latinx/white proportion being almost 6 times larger than the black/white, It is unfortunate to see that the level of incarceration has increased over the years, as it is evident that criminal justice reform is necessary. On the other hand, when looking at Oregon, for *2018* incarcerations, there was not a huge gap between the proportion of black/white and Latinx/white, **(0.81 v.s. 1.04)**, this was not shocking to me since Oregon is much smaller in population in comparison to California, therefore having less of a black and Latinx community. It was relieving to see that there was not a huge increase in incarceration when compared to the overall proportion for Oregon, **(0.81 v.s. 2)**. This also raises the question on if racial disparities in the justice system are more present in highly populated areas of people of color.
+
+### **Black Jail Incarceration Rates Nationwide by the Year**
+
+Evidently, incarceration rates of black individuals has only increased since the beginning of data being collected in 1988. The data is skewed to the left, with the peak occurring in 2008, where there was the highest incarceration rate. Luckily, since 2008, the rates have slowly decreased, however it is not a significant change, indicating that reform is still very much necessary. 
 
 ``` {r echo = FALSE}
 black_bar_chart1
 ```
+
+### **Jail Population of Latinx v.s. White People**
+
+This graph comparing the _Latinx_ jail population (yellow), to the _White_ jail population (purple), clearly illustrates the immense gap between imprisoned BIPOC and White people. The gap is increasingly prevalent in 1003, where there is a huge peak of the number of people who identify as _Latinx_ in jail. I included this graph in order to help prove the unfortunate, yet true fact that BIPOC are jailed at higher rates than their white counterparts, and face harsher punishment for crimes, increasing the totals of POC in jails. 
+
 ``` {r echo = FALSE}
 jail_pop_by_race2
 ```
+
+### **Black Jail Population in Washington**
+
+The inclusion of a graph of Washington, is because as an individual who had lived in Washington her entire life, I wanted to analyze the trends and where the counties with the highest populations of incarcerated black individuals are located. This graph is color coded, with counties that have the red hues being where the highest population of black incarcerations were which was **Yakima County** and **Lincoln County**, and **Adams County** and lowest populations being tinted bright blue, which **Whitman County** had the least. 
+
 ``` {r echo = FALSE}
 incarcerations_black_map_wa
 ```
+
+### **Black Jail Population in California**
+
+The inclusion of the California map, was to also analyze what counties with the highest populations of incarcerated black individuals in California were. Again, this graph is color coded, with counties that are tinted with red hues being where the highest populations of incarcerated black individuals are located, which was **Trinity County**, and the lowest population of incarcerated black individuals being tinted bright blue, which was **Del Norte County** and **Lassen County**. 
+
 ``` {r echo = FALSE}
 incarceration_black_map_ca
 ```
