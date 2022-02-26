@@ -6,10 +6,10 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-
-source("~/Documents/INFO201CODE/a3-vmulugeta1/source/analysis.R")
-knitr:: opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr:: opts_chunk$set(echo = TRUE)
+source("../source/analysis.R")
 ```
+
 ### **Incarceration Rates in Relation to Race**
 
 Looking at the data presented on the _**Vera Institute for Justice**_ regarding **Incarceration Trends**, it is clearly seen that there are racial disparities present in jail rates. On the website there are very detailed reports on the incarcerations of different races, having a specific emphasis on people of color- and black people particularly, in aims to prove how this is a result of the criminal system treating black people more harshly in every sector of the legal process. These racial disparities cause harms beyond longer jail times, but also lead towards disproportionate economic, health, and social problems for communities of color. 
