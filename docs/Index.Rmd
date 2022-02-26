@@ -6,7 +6,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
- source("~/Documents/INFO201CODE/a3-vmulugeta1/source/analysis.R")
+
+source("~/Documents/INFO201CODE/a3-vmulugeta1/source/analysis.R")
 knitr:: opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 ### **Incarceration Rates in Relation to Race**
